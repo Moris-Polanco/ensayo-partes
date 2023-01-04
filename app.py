@@ -1,3 +1,12 @@
+import openai
+import streamlit as st
+import os
+
+# Autenticación de OpenAI (oculta la clave en una variable de entorno)
+openai.api_key = os.environ.get("OPENAI_API_KEY")
+
+# Crear una interfaz de usuario con streamlit
+st.title("Generador de ensayo largo")
 
 # Agrega una caja de texto para que el usuario ingrese el tema del ensayo
 topic = st.text_input("Ingrese el tema del ensayo:")
